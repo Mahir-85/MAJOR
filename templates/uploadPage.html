@@ -1,0 +1,154 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/alogo.png') }}" alt="Logo">
+            <span>Mission-Smart Cities</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/dashboard">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="container">
+            <h2 class="my-heading">Welcome to the Dashboard</h2>
+            <div class="my-div">
+            <form action="/upload-file" method="post" enctype="multipart/form-data">
+             <table class="centered-form">
+                <tr>
+                    <td>
+                        <label for="model_select">Select Model:</label>
+                        <select id="model_select" name="model_name">
+                            <option selected disabled>--Select--</option>
+                            <option value="garbage">Garbage detection</option>
+                            <option value="pothole">Pothole detection</option>
+                            <option value="cattle">Cattle detection</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="uploadfile">Select the file.</label>
+                        <input type="file" name="uploadfile" accept="video/*, image/*">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>Submit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/dashboard" class="dash">Go to Dashboard</a>
+                    </td>
+                </tr>
+            </table>
+         </form>
+        </div>
+     </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="left-content">
+                <p class="copyright">Copyright &copy; <a href="#">Smart City</a></p>
+            </div>
+            <div class="right-content">
+                <ul class="socials">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/alogo.png') }}" alt="Logo">
+            <span>Mission-Smart Cities</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/dashboard">Home</a></li>
+                <li><a href="/review">About</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 class="my-heading">Welcome to the Dashboard</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h2>Pothole Detection</h2>
+                <button class="upload-box">Upload</button>
+            </div>
+            <div class="grid-item">
+                <h2>Cattle Detection</h2>
+                <button class="upload-box">Upload</button>
+            </div>
+            <div class="grid-item">
+                <h2>Garbage Detection</h2>
+                <button class="upload-box">Upload</button>
+            </div>
+        </div>
+    </div>
+            <div class="popup" id="popup">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <p>Upload your file here.</p>
+            </div>
+            <script>
+                document.querySelector('.choose-file').addEventListener('click', () => {
+                    document.getElementById('popup').classList.add('active');
+                });
+        
+                document.querySelectorAll('.upload-box').forEach(item => {
+                    item.addEventListener('click', () => {
+                        document.getElementById('popup').classList.add('active');
+                    });
+                });
+        
+                function closePopup() {
+                    document.getElementById('popup').classList.remove('active');
+                }
+            </script>
+         <footer>
+            <div class="footer-content">
+                <div class="left-content">
+                    <p class="copyright">Copyright &copy; <a href="#">Smart City</a></p>
+                </div>
+                <div class="right-content">
+                    <ul class="socials">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        </body>
+        </html>

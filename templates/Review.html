@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/alogo.png') }}" alt="Logo">
+            <span>Mission-Smart Cities</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/dashboard">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="about-section">
+        <h2>Review of Project</h2>
+        <p>The dynamic terrain of smart city efforts has led to an increasing importance of technology and urban management. Urban environments have many different issues, but one of the biggest is identifying and managing barriers like potholes, garbage, and cattle. In light of this, the "Cattle, Pothole, and Garbage Detection Project" has become a trailblazing initiative in the industry that aims to tackle these complex issues. Our research project's main goal is to improve urban safety and cleanliness by monitoring and detecting animals, potholes, and trash in smart cities through the application of computer vision and transfer learning on the cutting-edge YOLOv8 model.</p>
+
+        <p>The project's methodology is distinguished by its incorporation of state-of-the-art technology, including machine learning and computer vision. The project provides a comprehensive solution for the real-time identification and monitoring of waste, potholes, and animals in urban environments by utilising these technologies. The project's adaptability to various urban environments is one of its main advantages. The robustness of the system guarantees efficient obstacle detection and management in a variety of environments, be it the rural landscapes of an agricultural region or the busy streets of a big city.</p>
+
+        <p>To sum up, the "Cattle, Pothole, and Garbage Detection Project" is a big advancement in the field of developing smart cities. Its creative strategy, which uses cutting-edge technology to address difficult urban problems, has great potential to make cities more effective, sustainable, and livable. Initiatives such as this shape the cities of the future, acting as beacons of development as metropolitan populations continue to expand and change.</p>
+    </section>
+
+    <section class="about-section">
+        <h2>About Technology</h2>
+        <p>To successfully accomplish its goals, the "Cattle, Pothole, and Garbage Detection Project" makes use of a wide range of technology. The project's major technologies are broken down as follows:</p>
+        
+        <ul>
+            <li><strong>HTML:</strong> The common markup language for building websites and web apps is called HTML, or Hypertext Markup Language. HTML is probably used in this project to help with the web-based user interface's design and organisation.</li>
+            <li><strong>Cascading Style Sheets (CSS):</strong> CSS is used to style HTML elements, improving the web interface's visual presentation and layout. It facilitates the development of an aesthetically pleasing and intuitive user interface for people interacting with the detection system.</li>
+            <li><strong>JavaScript:</strong> In web development, client-side scripting is frequently done using JavaScript, a programming language. JavaScript might be used in this project for asynchronous server communication, client-side validation, and other interactive features.</li>
+            <li><strong>Flask:</strong> Flask is a Python web framework that is versatile and lightweight. It is frequently utilised in the development of RESTful APIs and online applications. Flask probably acts as the backend framework for this project, managing HTTP requests, routing, and interacting with the object identification machine learning models.</li>
+            <li><strong>OpenCV-Python:</strong> The widely used open-source computer vision and machine learning software package. The OpenCV Python binding, known as OpenCV-Python, gives users access to a variety of computer vision and image processing techniques.</li>
+            <li><strong>Ultralytics:</strong> For computer vision workloads, Ultralytics offers cutting-edge deep learning solutions. It provides tools for training custom models as well as pre-trained models, with an emphasis on object detection and recognition.</li>
+            <li><strong>PyMySQL:</strong> PyMySQL is a pure-Python client library for MySQL that offers an easy-to-use interface for Python programmes to communicate with MySQL databases. PyMySQL used in this project to connect to a database and run SQL queries to save and retrieve information about objects and events that have been observed.</li>
+            <li><strong>Flask-SQLAlchemy:</strong> An ORM (Object-Relational Mapping) layer is provided by this Flask extension, which makes database interaction easier. It enables smooth communication between SQL databases and Flask applications. In this project, the MySQL database and Flask web application were integrated using Flask-SQLAlchemy.</li>
+            <li><strong>YOLOv8:</strong> YOLOv8 is a fast and accurate object identification model based on deep learning. It is a member of the object detection algorithm family called You Only Look Once (YOLO). YOLOv8 is probably used in this project to locate and detect potholes, cattle, and trash in real-time from pictures or video streams.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="left-content">
+                <p class="copyright">Copyright &copy; <a href="#">Smart City</a></p>
+            </div>
+            <div class="right-content">
+                <ul class="socials">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
